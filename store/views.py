@@ -12,7 +12,7 @@ from django.db.models import Count
 class ProductList(FilterView):
     model = Product
     queryset = Product.objects.all()
-    paginate_by = 20
+    paginate_by = 6
     filterset_class = ProductFilter
     context_object_name = 'products'
     template_name = 'store/product_list.html'

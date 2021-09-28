@@ -5,6 +5,7 @@ from django.urls import reverse
 
 
 class Category(models.Model):
+    image = models.ImageField(upload_to='media/', default='static/img/flags.png')
     name = models.CharField(max_length=50, null=False, blank=False)
     slug = models.SlugField(unique=True, max_length=100, db_index=True)
 

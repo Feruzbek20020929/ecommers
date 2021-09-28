@@ -104,14 +104,14 @@
                                             </span>
                                         </span>
 
-                                        <a href="{% url "accounts:profile" %}" class="login-btn text-white mr-2">
+                                        <a href="{% url 'accounts:profile' %}" class="login-btn text-white mr-2">
                                             <span class="d-none d-md-inline-block font-weight-bold text-capitalize">
                                                 <i class="fa fa-user mr-1"></i>
                                                 {% trans "your profile" %}
                                             </span>
                                         </a>
 
-                                        <a href="{% url "panier:detail_panier" %}" class="login-btn text-white font-weight-bold">
+                                        <a href="{% url 'panier:detail_panier' %}" class="login-btn text-white font-weight-bold">
                                             <i class="fa fa-shopping-bag mr-1"></i>
                                             {% trans "your orders" %}
                                         </a>
@@ -119,7 +119,7 @@
 
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
-                                            <a href="{% url "accounts:logout" %}" class="text-white font-weight-bold text-capitalize">
+                                            <a href="{% url 'accounts:logout' %}" class="text-white font-weight-bold text-capitalize">
                                                 <i class="fas fa-sign-out-alt mr-1"></i>
                                                 <span class="d-none d-xl-inline-block">
                                                     {% trans "logout" %}
@@ -129,24 +129,24 @@
                                     </ul>
                                 {% else %}
                                     <div class="login">
-                                        <a href="{% url "accounts:profile" %}" class="login-btn text-white mr-2">
+                                        <a href="{% url 'accounts:profile' %}" class="login-btn text-white mr-2">
                                             <i class="fa fa-user mr-1"></i>
                                             {% trans "your profile" %}
                                         </a>
 
-                                        <a href="{% url "panier:detail_panier" %}" class="login-btn text-white">
+                                        <a href="{% url 'panier:detail_panier' %}" class="login-btn text-white">
                                             <i class="fa fa-shopping-bag mr-1"></i>
                                             {% trans "your orders" %}
                                         </a>
                                     </div>
 
                                     <ul class="list-inline">
-                                        <a href="{% url "accounts:login" %}" class="login-btn text-white mr-2">
+                                        <a href="{% url 'accounts:login' %}" class="login-btn text-white mr-2">
                                             <i class="fas fa-sign-in-alt mr-1"></i>
                                             {% trans "login" %}
                                         </a>
 
-                                        <a href="{% url "accounts:register" %}" class="login-btn text-white">
+                                        <a href="{% url 'accounts:register' %}" class="login-btn text-white">
                                             <i class="fas fa-user-plus mr-1"></i>
                                             {% trans "signup" %}
                                         </a>
@@ -166,7 +166,7 @@
                         <div class="col-md-3 text-center text-lg-right my-sm-2">
                             <!-- Navbar brand -->
                             <div class="header-logo">
-                                <a href="{% url "shop:all_produit" %}" class="d-block text-uppercase font-weight-bold">{{ site_name }}
+                                <a href="{% url 'shop:all_produit' %}" class="d-block text-uppercase font-weight-bold">{{ site_name }}
                                 </a>
                             </div><!-- ./Navbar brand -->
                         </div>
@@ -174,7 +174,7 @@
                         <div class="col-md-6">
                             <div class="header-search">
                                 <!-- search -->
-                                <form role="search" class="position-relative" action="{% url "shop:search" %}">
+                                <form role="search" class="position-relative" action="{% url 'shop:search' %}">
                                     <div class="input-group">
                                         <input class="input form-control border shadow-none" type="search" placeholder="{% trans "Search for a product or category..." %}" aria-label="search" name="q" autocomplete="false">
                                         <div class="input-group-append shadow-none">
@@ -191,7 +191,7 @@
                             <div class="header-ctn">
                                 <div>
                                     {% if request.user.is_authenticated %}
-                                        <a class="nav-link" href="{% url "panier:detail_panier" %}">
+                                        <a class="nav-link" href="{% url 'panier:detail_panier' %}">
                                             <i class="icon-bag mr-1"></i>
                                             <span>{% trans "Cart" %}</span>
                                             <div class="cart-quantity text-white font-weight-bold">
@@ -205,7 +205,7 @@
                                             </div>
                                         </a>
                                     {% else %}
-                                        <a class="nav-link" href="{% url "panier:detail_panier" %}">
+                                        <a class="nav-link" href="{% url 'panier:detail_panier' %}">
                                             <i class="icon-bag"></i>
                                             <span>{% trans "Cart" %}</span>
                                             </a>

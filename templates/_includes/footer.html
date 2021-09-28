@@ -27,8 +27,8 @@
       <div class="container p-5">
         <div class="row">
           <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <a href="{% url "shop:all_produit" %}" class="stretched-link">
-              <img src="{% static "img/logo.png" %}" alt="" class="w-25 d-block img-fluid mb-3">
+            <a href="{% url 'shop:all_produit' %}" class="stretched-link">
+              <img src="{% static 'img/logo.png' %}" alt="" class="w-25 d-block img-fluid mb-3">
             </a>
             <p class="font-italic text-muted small">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
@@ -70,7 +70,7 @@
               {% trans "Subscribe to our communications to receive our best offers !" %}
             </p>
             <div class="rounded border">
-              <form class="input-group" action="{% url "shop:marketing" %}" method="POST">
+              <form class="input-group" action="{% url 'shop:marketing' %}" method="POST">
                 {% csrf_token %}
                 <input id="{{ form.email.id_for_label }}" name="{{ form.email.name }}" type="{{ form.email.label }}" placeholder="{% trans "Enter your email address" %}" aria-describedby="button-addon" class="form-control border shadow-none" required>
                 <div class="input-group-append">
