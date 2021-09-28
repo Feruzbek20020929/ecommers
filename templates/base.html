@@ -1,0 +1,40 @@
+{% load i18n static shop_tags humanize %}
+
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+    <head>
+        <!-- meta header-->
+        {% include "_includes/csslink.html" %}
+        <!-- ./meta header-->
+
+        <!-- titre -->
+        <title>
+            {% block title %}
+                {% if page_title %}
+                    {{ page_title }} |
+                {% endif %}
+                    {{ site_name }} | {{ site_desc }}
+            {% endblock title %}
+        </title>
+        <!-- ./titre -->
+    </head>
+
+
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 flex-shrink-0">
+            <!-- Start your project here-->
+            {% include "_includes/navbar.html" %}
+            <!-- Caroussel -->
+            {% block carousel %}
+            {% endblock carousel %}
+
+            <!-- Contenu de la page -->
+            {% block content %}
+            {% endblock content %}
+
+        </div>
+
+        {% include "_includes/footer.html" %}
+        {% include "_includes/jscripts.html" %}
+    </body>
+</html>
