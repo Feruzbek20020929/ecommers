@@ -16,7 +16,7 @@
         {{order.user.last_name}}
       </h4>
       <h4 class="font-weight-light">{{order.address}}</h4>
-      <h4 class="font-weight-light mb-3">{{order.city}}, {{order.pin_code}}</h4>
+      <h4 class="font-weight-light mb-3">{{order.city}}, {{order.Phone}}</h4>
       <h5 class="font-weight-light mb-4">Placed on {{order.created}}</h5>
       <hr />
       <table class="table table-striped mt-4">
@@ -64,3 +64,4 @@
     </footer>
   </body>
 </html>
+{% block footer %} {% include 'slider.html' %}{% endblock%}

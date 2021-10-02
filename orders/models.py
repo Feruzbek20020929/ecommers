@@ -17,7 +17,7 @@ class Order(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
                              related_name='orders', on_delete=models.CASCADE)
     address = models.CharField(max_length=150, blank=False, null=False)
-    pin_code = models.CharField(max_length=10)
+    Phone = models.CharField(max_length=15)
     city = models.CharField(max_length=50)
     paid = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)

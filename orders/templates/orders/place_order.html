@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load crispy_forms_tags %} {% block title %} Place
+{% extends 'index.html' %} {% load crispy_forms_tags %} {% block title %} Place
 Order {% endblock title %} {% block content %}
 <div class="row my-3">
   <div class="col-md-6 col-12 mb-3">
@@ -36,3 +36,4 @@ Order {% endblock title %} {% block content %}
   </div>
 </div>
 {% endblock content %}
+{% block footer %} {% include 'slider.html' %}{% endblock%}

@@ -1,0 +1,27 @@
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel" style="border:none">
+
+  <!--Indicators-->
+  <div class="carousel-inner" role="listbox" style="border:none">
+    {% for p in products_picked %}
+    <!--First slide-->
+    {% if forloop.counter0|divisibleby:4 %}
+    <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif %}" style="border:none"> {% endif %}
+
+      <div class="col-md-3" style="float:left" style="border:none">
+       <div class="card mb-4" style="width:300px; height:300px; justify-content:center; display:flex; border:none">
+          <img class="w3-round"
+            src="{{p.image.url}}" alt="Cardimg">
+        </div>
+      </div>
+      {% if forloop.counter|divisibleby:4 or forloop.last %}
+    </div>{% endif %}
+    {% endfor%}
+    <!--/.First slide-->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

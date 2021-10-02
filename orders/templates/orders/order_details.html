@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load thumbnail %} {% block title %} Order no -
+{% extends 'index.html' %} {% load thumbnail %} {% block title %} Order no -
 {{order.id}} {% endblock title %} {% block content %}
 <h2 class="mt-4">Order id - {{order.id}}</h2>
 {% comment %}
@@ -14,7 +14,7 @@
   {% endif %}
 </h4>
 <h5 class="font-weight-light">
-  Delivery Address - {{order.address}}, {{order.city}}, {{order.pin_code}}
+  Delivery Address - {{order.address}}, {{order.city}}, {{order.Phone}}
 </h5>
 <h5 class="font-weight-light">Status - {{order.status}}</h5>
 <h5 class="font-weight-light">Placed on - {{order.created}}</h5>

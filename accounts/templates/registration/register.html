@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load crispy_forms_tags %} {% block title %}
+{% extends 'index.html' %} {% load crispy_forms_tags %} {% block title %}
 Register {% endblock title %} {% block content %}
 <div class="card card-body mx-auto my-4 auth-card shadow-sm">
   <h1 class="display-4 text-center">Register</h1>
@@ -17,3 +17,4 @@ Register {% endblock title %} {% block content %}
   </form>
 </div>
 {% endblock content %}
+{% block footer %} {% include 'slider.html' %}{% endblock%}

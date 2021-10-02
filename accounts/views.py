@@ -27,3 +27,7 @@ def profile(req):
         if form.is_valid():
             form.save()
     return render(req, 'registration/profile.html', {'form': form})
+
+
+
+

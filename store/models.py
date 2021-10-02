@@ -41,3 +41,8 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         return reverse('store:product_details', kwargs={'slug': self.slug})
+
+
+class Carusel(models.Model):
+    image = models.ImageField(upload_to='media/carusel/%Y/%m/%d/', blank=True)
+    name = models.SlugField(unique=True, max_length=100, db_index=True)
