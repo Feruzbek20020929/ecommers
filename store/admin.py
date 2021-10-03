@@ -1,5 +1,5 @@
 from django.contrib import admin
-from store.models import Category, Product
+from store.models import Category, Product,Carusel
 
 # Register your models here.
 
@@ -18,3 +18,4 @@ class ProductAdmin(admin.ModelAdmin):
     raw_id_fields = ('category',)
     list_editable = ('price', 'availibility')
     list_per_page = 24
+admin.site.register(Carusel)

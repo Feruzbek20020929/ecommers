@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block title %}Your Orders {% endblock title %}
+{% extends 'index.html' %} {% block title %}Your Orders {% endblock title %}
 {% block content %}
 <h1 class="font-weight-light mt-3">Your Orders</h1>
 <hr />
@@ -20,7 +20,7 @@
     <h5>Rs.{{order.total_price}}</h5>
     <p class="mb-0">{{order.total_items}} Items</p>
     <p class="mb-0">
-      Delivery Address - {{order.address}}, {{order.city}}, {{order.pin_code}}
+      Delivery Address - {{order.address}}, {{order.city}}, {{order.Phone}}
     </p>
     <p class="mb-0">Placed {{order.created|timesince}} ago.</p>
   </li>
@@ -53,3 +53,5 @@
   </ul>
 </nav>
 {% endwith %} {% endblock content %}
+
+{% block footer %} {% include 'slider.html' %}{% endblock%}

@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block title %} Cart {% endblock title %}
+{% extends 'index.html' %} {% block title %} Cart {% endblock title %}
 {% block content %}
 <h1 class="display-4 mt-4 text-center">Cart</h1>
 <hr />
@@ -79,3 +79,4 @@
   inputs.forEach((i) => i.classList.add("form-control-sm"));
 </script>
 {% endblock content %}
+{% block footer %} {% include 'slider.html' %}{% endblock%}

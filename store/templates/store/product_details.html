@@ -1,5 +1,5 @@
-{%extends 'base.html'%} {%load thumbnail%} {%load store_tags%} {% block title %}
-{{product.name}} {% endblock title %} {%block content%}
+{% extends 'index.html'%} {% load thumbnail%} {% load store_tags%} {% block title %}
+{{product.name}} {% endblock title %} {% block content%}
 <nav>
   <ol class="breadcrumb mt-2">
     <li class="breadcrumb-item">
@@ -79,4 +79,5 @@
     {% endif %}
   </div>
 </div>
-{%get_similar product.id product.price product.category %} {% endblock content%}
+{% get_similar product.id product.price product.category %} 
+{% endblock content%}
