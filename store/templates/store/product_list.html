@@ -1,6 +1,92 @@
 {% extends 'index.html' %} {% load crispy_forms_tags %} {% load thumbnail %}
 {% block title %}Store{% endblock title %}
 {% block content %}
+<style>
+.filter-box{
+  display:flex;
+
+}
+.filter-box .category-box{
+  margin-right:30px;
+  display:flex;
+}
+
+
+.category-i a{
+  padding: 5px 10px;
+  border: 2px solid #6D0069;
+  border-radius: 6px; 
+  color: #6D0069;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.category-i a:hover{
+background: #6D0069;
+text-decoration:none;
+color: white;
+}
+.price-form{
+  display:flex;
+
+
+}
+.price-form button {
+  margin-left: 10px;
+  height: max-content;
+  padding: 6px 12px;
+  color: white;
+  background: #6D0069;
+  border: 2px solid #6D0069;
+ transition: .3s;
+}
+.price-form button:hover{
+  background: transparent;
+  color: #6D0069;
+  border: 2px solid #6D0069;
+}
+
+.price-form .textinput:focus{
+  color: #6D0069;
+   border-color: #6D0069;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #6D0069;
+}
+.price-form .textinput{
+  color: #6D0069;
+   border-color: #6D0069;
+    outline: 0;
+   
+}
+#id_category{
+  margin-right:30px;
+  display:flex;
+  padding: 5px 10px;
+  margin-right:25px;
+  border: 2px solid #6D0069;
+  border-radius: 6px; 
+  color: #6D0069;
+  font-weight: 600;
+  transition: .3s;
+}
+#div_id_category{
+  width:400px;
+  margin-right:10px
+}
+#id_category:hover{
+background: #6D0069;
+text-decoration:none;
+color: white;
+}
+.card-title a:hover{
+  color: #6D0069;
+  text-decoration:none;
+}
+.card-title a{
+  color:#6D0069;
+}
+
+</style>
 
 <div id="carousel-example-2" class="carousel slide" data-ride="carousel">
 
@@ -9,49 +95,48 @@
     <li data-target="#carousel-example-2" data-slide-to="1"></li>
     <li data-target="#carousel-example-2" data-slide-to="2"></li>
   </ol>
-
-  <div class="carousel-inner" role="listbox" style="width:100%">
+  <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <div class="view hm-white-slight">
-        <img class="d-block w-100" src="https://wallpaperaccess.com/full/2970443.jpg" alt="First slide">
+        <img class="d-block w-100" src="https://i.ytimg.com/vi/BditV3ei2L4/maxresdefault.jpg" alt="First slide">
         <div class="mask"></div>
       </div>
       <div class="carousel-caption">
-        <h3 class="h3-responsive">First title</h3>
-        <p>First text</p>
+        <h3 class="h3-responsive" style="color:#6D0069">First title</h3>
+        <p style="color:#6D0069">First text</p>
       </div>
     </div>
     <div class="carousel-item">
 
       <div class="view hm-white-slight">
-        <img class="d-block w-100" src="https://wallpapercave.com/wp/wp2044743.jpg" alt="Second slide">
+        <img class="d-block w-100" src="https://www.thecosmeticboxes.com/wp-content/uploads/2018/03/perfume-boxes5.jpg" alt="Second slide">
         <div class="mask"></div>
       </div>
       <div class="carousel-caption">
-        <h3 class="h3-responsive">Second title</h3>
-        <p>Second text</p>
+        <h3 class="h3-responsive" style="color:#6D0069">Second title</h3>
+        <p style="color:#6D0069">Second text</p>
       </div>
     </div>
     <div class="carousel-item">
 
       <div class="view hm-white-slight">
-        <img class="d-block w-100" src="https://cdn.wallpapersafari.com/22/54/lErAKe.jpg" alt="Third slide">
+        <img class="d-block w-100" src="https://pro2-bar-s3-cdn-cf.myportfolio.com/efb920ee-2935-4c2d-8b89-74c0283625cb/803e753e-da81-4a06-8346-23fe0de05d30_rw_1920.jpg?h=977fbad162d15359686431acfc6bb9a9" alt="Third slide">
         <div class="mask"></div>
       </div>
       <div class="carousel-caption">
-        <h3 class="h3-responsive">Third title</h3>
-        <p>Third text</p>
+        <h3 class="h3-responsive" style="color:#6D0069">Third title</h3>
+        <p style="color:#6D0069">Third text</p>
       </div>
     </div>
   </div>
 
   <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+    <span class="sr-only" style="color:#6D0069">Ortga</span>
   </a>
   <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+    <span class="sr-only" style="color:#6D0069">Keyingisi</span>
   </a>
   <!--/.Controls-->
 </div>
@@ -63,7 +148,7 @@
 
 <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel" style="border:none">
   <center>
-    <h1 class="font-weight-light" style="font-family: " Times New Roman", Times, serif;">Our Product</h1>
+    <h1 class="font-weight-light" style="font-family: " Times New Roman", color:#6D0069">Bizning tovarlar</h1>
   </center>
   <!--Indicators-->
   <div class="carousel-inner" role="listbox" style="border:none">
@@ -96,26 +181,34 @@
     <br>
     <br>
     <br>
-    <h2 class="t-store__parts-switch-wrapper t-align_center">Category</h2>
+    {% comment %} <div class="filter-box align-items-center"> {% endcomment %}
+    {% comment %} <div class="category-box">
     {% for i in Categorya%}
-    <table>
-      <tr>
-        <th><a href="{{ c.get_absolute_path }}">{{ i.name}}</a></th>
-      </tr>
-    </table>
+
+
+        <div class="category-i form-check"><a href="{{ c.get_absolute_path }}" >{{ i.name}}</a></div>
+      
+
     {% endfor%}
+    </div> {% endcomment %}
 
 
-    <!-- <form class="filter-form">
+<div class="r t-rec t-rec_pt_15 t-rec_pb_135">
+<center>
+  <image src="/static/image/logohappy2.png" style="width:250px; heght:20px; display:flex"></center>
+  <br>
+  <h2 class="font-weight-light mb-2" style="text-align:center; color:#6D0069">Tovarlar</h2>
+  <div class="row">
+<div class="col-sm-10">
+    <form class="form-group price-form align-items-end" style="width:350px">
       {{filter.form|crispy}}
-      <button class="btn btn-info btn-block btn-sm" type="submit">
+      <button class="btn btn-info btn-sm mb-3" type="submit">
         Filter
       </button>
     </form>
-  </div>
-</div> -->
-<div class="r t-rec t-rec_pt_15 t-rec_pb_135">
-  <h2 class="font-weight-light mb-2" style="text-align:center">Products</h2>
+</div>
+</div>
+</div>
 
   <div class="row">
     {% for product in products %}
@@ -151,32 +244,33 @@
     {% empty %}
     
     <div class="col-12 text-center">
-      <h3 class="font-weight-light my-4 py-4">No products found.</h3>
+      <h3 class="font-weight-light my-4 py-4" style="color:#6D0069">Tovar aniqlanmadi</h3>
     </div>
     {% endfor %}
   </div>
 {% if products|length != 0 %}
-  <nav>
+  <nav style="text-align:center">
     {% with page_obj as page %}
     <div class="mt-2">
       <p class="my-2">
         Page {{ page.number }} of {{ page.paginator.num_pages }}
       </p>
-      <ul class="pagination">
+      <center>
+      <ul class="pagination d-flex justify-content-center">
         {% if page.has_previous %}
         <li class="page-item">
-          <a href="?page={{ page.previous_page_number }}" class="page-link">
-            Previous
+          <a href="?page={{ page.previous_page_number }}" class="page-link" style="color:#6D0069">
+            Ortga
           </a>
         </li>
         {% endif %}
-        <li class="page-item active">
-          <a class="page-link">{{ page.number }}</a>
+        <li class="page-item active text-center" style="text-align:center">
+          <a class="page-link" style="background:#6D0069; color:white; border-color:white">{{ page.number }}</a>
         </li>
         {% if page.has_next %}
-        <li class="page-item">
-          <a href="?page={{ page.next_page_number }}" class="page-link">
-            Next
+        <li class="page-item text-center">
+          <a href="?page={{ page.next_page_number }}" class="page-link "  style="background:#6D0069; color:white" >
+            Keyingisi
           </a>
         </li>
         {% endif %}
@@ -185,6 +279,7 @@
     {% endwith %}
   </nav>
   {% endif %}
+  </center>
 </div>
 </div>  
 <script> 

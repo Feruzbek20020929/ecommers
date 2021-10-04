@@ -15,13 +15,13 @@ class Productcreate(CreateView):
     model = Product
     form_class = ProductForm
     template_name = 'create/Productadd.html'
-    success_url = '/'
+    success_url = 'backoffice/'
 
 class ProductUpdateView(UpdateView):
     model = Product
     form_class = ProductForm
     template_name = 'update/productupdate.html'
-    success_url = '/'
+    success_url = 'backoffice/'
 
 class ProductDeleteView(DeleteView):
     model = Product
@@ -31,7 +31,7 @@ class ProductDeleteView(DeleteView):
 
 class ProductList(ListView):
     model = Product
-    success_url='/'
+    success_url='backoffice/'
     template_name = 'home.html'
 
 
@@ -48,20 +48,20 @@ class ProductList(ListView):
 class CategoryAddView(CreateView):
     model = Category
     form_class = CategoryForm
-    success_url = '/'
+    success_url = 'backoffice/'
     template_name='create/category_form.html'
 
 
 class CategoryUpdateView(UpdateView):
     model = Category
     form_class = CategoryForm
-    success_url = '/'
+    success_url = 'backoffice/'
     template_name="update/categoryupdate.html"
 
 class CategoryDeleteView(DeleteView):
     model = Category
     form_class =CategoryForm
-    success_url = '/'
+    success_url = 'backoffice/'
     template_name="delete/categorydelete.html"
     
 
@@ -73,7 +73,7 @@ class CategoryList(ListView):
 class OrderUpdateView(UpdateView):
     model = Order
     form_class = OrderForm
-    success_url = '/'
+    success_url = 'backoffice/'
     template_name="update/contactupdate.html"
 
     

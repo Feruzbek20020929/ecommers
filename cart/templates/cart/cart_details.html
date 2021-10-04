@@ -1,6 +1,6 @@
 {% extends 'index.html' %} {% block title %} Cart {% endblock title %}
 {% block content %}
-<h1 class="display-4 mt-4 text-center">Cart</h1>
+<h1 class="display-4 mt-4 text-center">Savatcha</h1>
 <hr />
 {% if total %}
 <div class="row justify-content-center">
@@ -8,11 +8,11 @@
     <table class="table table-borderless table-striped table-responsive">
       <thead class="thead-dark">
         <tr>
-          <th>Name</th>
-          <th>Unit Price</th>
-          <th>Quantity</th>
-          <th>Remove</th>
-          <th>Total Price</th>
+          <th>Nomi</th>
+          <th>Donasining narxi</th>
+          <th>Soni</th>
+          <th>Uchirish</th>
+          <th>Umumiy narx</th>
         </tr>
       </thead>
       <tbody>
@@ -21,7 +21,7 @@
           <td>
             <a href="{{i.product.get_absolute_url}}"> {{i.product.name}} </a>
           </td>
-          <td>Rs.{{i.product.price}}</td>
+          <td>UZS{{i.product.price}}</td>
           <td>
             <form
               action="{% url 'cart:add' %}"
@@ -34,7 +34,7 @@
                 {{i.form.quantity}}
                 <div class="input-group-append">
                   <button class="btn btn-primary btn-sm" type="submit">
-                    <i class="fa fa-shopping-cart mr-1"></i> Update
+                    <i class="fa fa-shopping-cart mr-1"></i> Yangilash
                   </button>
                 </div>
               </div>
@@ -45,32 +45,32 @@
               href="{% url 'cart:remove' i.product.id %}"
               class="btn btn-danger btn-sm"
             >
-              <i class="fa fa-times mr-1"></i> Remove
+              <i class="fa fa-times mr-1"></i> Uchirish
             </a>
           </td>
-          <td>Rs.{{i.total}}</td>
+          <td>UZS.{{i.total}}</td>
         </tr>
         {% endfor %}
       </tbody>
       <tfoot class="table-secondary">
         <tr>
           <td colspan="3"></td>
-          <td>Grand Total -</td>
-          <td><b>Rs.{{total}}</b></td>
+          <td>Jami -</td>
+          <td><b>UZS.{{total}}</b></td>
         </tr>
       </tfoot>
     </table>
   </div>
 </div>
 <div class="text-center">
-  <a href="{% url 'cart:clear' %}" class="btn btn-warning">Clear Cart</a>
-  <a href="{% url 'orders:place' %}" class="btn btn-success">Checkout</a>
+  <a href="{% url 'cart:clear' %}" class="btn btn-warning">Savatni tozalash</a>
+  <a href="{% url 'orders:place' %}" class="btn btn-success">Hisoblash</a>
 </div>
 {% else %}
 <div class="text-center">
-  <h3 class="font-weight-light">Cart is empty</h3>
+  <h3 class="font-weight-light">Savatcha bush</h3>
   <a href="{% url 'store:product_list' %}" class="btn btn-secondary">
-    Go to Store
+    Do'konga o'ting
   </a>
 </div>
 {% endif %}
