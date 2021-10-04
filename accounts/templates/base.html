@@ -27,7 +27,7 @@
 .ftco-navbar-light {
   background: #fff !important;
   z-index: 3;
-  padding: 10px 10px;
+  padding: 5px 10px;
   border-radius: 5px;
   -webkit-box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
   -moz-box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
@@ -124,25 +124,25 @@
 		    <div class="container">
 		    	<a class="navbar-brand" href="{% url 'store:product_list' %}"><image src="/static/image/logohappy2.png" style="width:150px; heght:30px"></a>
 		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-		        <span class="fa fa-bars"></span> Menu
+		        <span class="fa fa-bars"></span> Menyu
 		      </button>
 		      <div class="collapse navbar-collapse" id="ftco-nav">
 		        <ul class="navbar-nav ml-auto mr-md-3">
-		        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-		        	<li class="nav-item"><a href="{% url 'store:categories_list' %}" class="nav-link">Category</a></li>
-		          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+		        	<li class="nav-item active"><a href="#" class="nav-link">Bosh sahifa</a></li>
+		        	<li class="nav-item"><a href="{% url 'store:categories_list' %}" class="nav-link">Kategoriya</a></li>
+		          <li class="nav-item"><a href="#" class="nav-link">Bog'lanish</a></li>
               <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" 
         required
                   type="text"
                   name="name"
                   placeholder="Search items">
-        <button class="btn btn-outline-success my-8 my-sm-2" type="submit" style="background:#6D0069; color:white">Search</button>
+        <button class="btn btn-outline-success my-8 my-sm-2" type="submit" style="background:#6D0069; color:white">Qidirish</button>
       </form>
               {% if user.is_authenticated %}
             <li class="nav-item">
               <a href="{% url 'orders:my' %}" class="nav-link">
-                <i class="fa fa-truck fa-lg mr-1"></i> My Orders
+                <i class="fa fa-truck fa-lg mr-1"></i> Buyurtmalarim
               </a>
             </li>
             <li class="nav-item">
@@ -166,18 +166,18 @@
                 <a href="{% url 'password_change'%}" class="dropdown-item">
                   Change Password
                 </a>
-                <a href="{% url 'logout' %}" class="dropdown-item">Logout</a>
+                <a href="{% url 'logout' %}" class="dropdown-item">Chiqish</a>
               </div>
             </li>
             {% else %}
             <li class="nav-item">
               <a href="{% url 'login' %}" class="nav-link">
-                <i class="fa fa-sign-in fa-lg"></i> Login
+                <i class="fa fa-sign-in fa-lg"></i> Kirish
               </a>
             </li>
             <li class="nav-item">
               <a href="{% url 'register' %}" class="nav-link">
-                <i class="fa fa-user-plus fa-lg"></i> Register
+                <i class="fa fa-user-plus fa-lg"></i> Ro'yxatdan o'tish
               </a>
             </li>
             {% endif %}
