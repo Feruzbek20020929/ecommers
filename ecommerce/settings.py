@@ -95,8 +95,10 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {}
 
-DATABASES['default'] = dj_database_url.config(
-    default='sqlite:///db.sqlite3')
+# DATABASES['default'] = dj_database_url.config(
+#     default='sqlite:///db.sqlite3')
+import dj_database_url
+DATABASES = { 'default': dj_database_url.config() }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
