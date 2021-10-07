@@ -1,6 +1,6 @@
 {% extends 'index.html' %} {% load crispy_forms_tags %} {% block title %}
 Register {% endblock title %} {% block content %}
-<div class="card card-body mx-auto my-4 auth-card shadow-sm">
+<div class="card card-body mx-auto my-4 auth-card shadow-sm" style="width:700px;">
   <h1 class="display-4 text-center">Ruyxatdan o'tish</h1>
   <form method="POST">
     {% csrf_token %} {{form|crispy}}

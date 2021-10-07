@@ -25,9 +25,9 @@ SECRET_KEY = os.environ.get(
     'secret_key', '_=4dm6vs^&ho6p29lhhkc3vh=(zl5-one3==g70o=z9b%&ddrt')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('debug', True)
+DEBUG = os.environ.get('debug', False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['happyboxtest.herokuapp.com/','127.0.0.1']
 
 
 # Application definition
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'cart',
     'orders',
     'backoffice',
+    'gunicorn',
 ]
 
 LOGIN_URL = 'login'
@@ -95,10 +96,10 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {}
 
-# DATABASES['default'] = dj_database_url.config(
-#     default='sqlite:///db.sqlite3')
-import dj_database_url
-DATABASES = { 'default': dj_database_url.config() }
+DATABASES['default'] = dj_database_url.config(
+    default='sqlite:///db.sqlite3')
+# import dj_database_url
+# DATABASES = { 'default': dj_database_url.config() }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
